@@ -22,7 +22,7 @@ csv()
 		var supportVersion = jsonObj['Support FW version'];
 		if(supportVersion == "") return true;
 
-		var outputFile = outputPath + jsonObj['Model Name'] + ".json";
+		var outputFile = outputPath + jsonObj['Model Name'] + "_NEWS.json";
 
 		var thisEvent = new newEvent();
 		thisEvent.webUrl = (jsonObj['Web URL'].length == 0) ? "NOTSUPPORT" : jsonObj['Web URL'];
