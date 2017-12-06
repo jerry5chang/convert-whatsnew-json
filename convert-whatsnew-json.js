@@ -6,97 +6,14 @@ var csv = require('csvtojson');
 const outputPath = './whatsnew_data/'
 const csvModelFilePath = './csv/whatsnew-model.csv';
 const csvDescFilePath = './csv/whatsnew-desc.csv';
-
-const LangTable = {
-    "EN": "English",
-    "TW": "Traditional Chinese",
-    "CN": "Simplified Chinese",
-/*  "UNKNOWN": "Bulgarian",*/
-    "TH": "Thai",
-    "UK": "Ukrainian",
-    "DA": "Danish",
-    "FI": "Finnish",
-    "NO": "Norwegian",
-    "SV": "Swedish",
-/*  "UNKNOWN": "Croatian",*/
-    "SL": "Slovenian",
-    "RO": "Romanian",
-    "HU": "Hungarian",
-    "MS": "Malay",
-    "CZ": "Czech",
-    "TR": "Turkish",
-    "BR": "Portuguese (Brazilian)",
-    "PL": "Polish",
-    "ES": "Spanish",
-    "NL": "Dutch",
-    "KR": "Korean",
-    "IT": "Italian",
-    "JP": "Japanese",
-    "FR": "French",
-    "RU": "Russian",
-    "DE": "German"
-}
+const LangTable = require('./data/LangMappingTable.js').LangTable;
 
 function newEvent(){
     this.eventId = new Date().getTime().toString();
     this.webUrl = "";
     this.appUrl = "";
-
-    this.title = {
-        "BR": "",
-        "CN": "",
-        "CZ": "",
-        "DA": "",
-        "DE": "",
-        "EN": "",
-        "ES": "",
-        "FI": "",
-        "FR": "",
-        "HU": "",
-        "IT": "",
-        "JP": "",
-        "KR": "",
-        "MS": "",
-        "NL": "",
-        "NO": "",
-        "PL": "",
-        "RO": "",
-        "RU": "",
-        "SL": "",
-        "SV": "",
-        "TH": "",
-        "TR": "",
-        "TW": "",
-        "UK": ""
-    };
-
-    this.desc = {
-        "BR": "",
-        "CN": "",
-        "CZ": "",
-        "DA": "",
-        "DE": "",
-        "EN": "",
-        "ES": "",
-        "FI": "",
-        "FR": "",
-        "HU": "",
-        "IT": "",
-        "JP": "",
-        "KR": "",
-        "MS": "",
-        "NL": "",
-        "NO": "",
-        "PL": "",
-        "RO": "",
-        "RU": "",
-        "SL": "",
-        "SV": "",
-        "TH": "",
-        "TR": "",
-        "TW": "",
-        "UK": ""
-    };
+    this.title = {};
+    this.desc = {};
 }
 
 csv()
