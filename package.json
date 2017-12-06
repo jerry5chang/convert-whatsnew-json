@@ -1,0 +1,13 @@
+{
+	"name": "convert-whatsnew-json",
+	"version": "1.0.0",
+	"description": "Convert CSV file to JSON",
+	"bin": {
+		"convert-whatsnew-json": "convert-whatsnew-json.js"
+	},
+	"dependencies": {
+		"csvtojson": "^1.1.9",
+		"fs": "0.0.1-security",
+		"jsonfile": "^4.0.0"
+	}
+}
