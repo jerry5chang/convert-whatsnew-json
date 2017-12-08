@@ -8,6 +8,7 @@
 	"dependencies": {
 		"csvtojson": "^1.1.9",
 		"fs": "0.0.1-security",
-		"jsonfile": "^4.0.0"
+		"jsonfile": "^4.0.0",
+		"yargs": "^10.0.3"
 	}
 }

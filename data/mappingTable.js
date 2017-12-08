@@ -1,4 +1,4 @@
-module.exports.languageTable = {
+module.exports.lang = {
 /*  "UNKNOWN": "Bulgarian",*/
 /*  "UNKNOWN": "Croatian",*/
     "EN": "English",
@@ -28,7 +28,7 @@ module.exports.languageTable = {
     "DE": "German"
 }
 
-module.exports.eventFields = {
+module.exports.content = {
     "Notification text": "desc",
     "Title": "title",
 }
